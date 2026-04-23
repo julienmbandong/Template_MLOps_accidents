@@ -55,19 +55,19 @@ def process_data(input_filepath_users, input_filepath_caract, input_filepath_pla
     df = merge_datasets(df_users, df_veh, df_places, df_caract)
 
     # Add new columns
-    df = add_new_columns(df, nb_victim, nb_vehicules)
+    #df = add_new_columns(df, nb_victim, nb_vehicules)
 
     # Modify target variable
-    df = modif_target_variable(df)
+    #df = modif_target_variable(df)
 
     # Replace values -1 and 0
-    df = replace_values(df)
+    #df = replace_values(df)
 
     # Drop columns
-    df = drop_columns(df)
+    #df = drop_columns(df)
 
     # Drop lines with NaN values
-    df = drop_lines_with_nan_values(df)
+    #df = drop_lines_with_nan_values(df)
 
     # Split data into training and testing sets
     X_train, X_test, y_train, y_test = split_data(df)
@@ -207,7 +207,7 @@ def create_folder_if_necessary(output_folderpath):
 def save_dataframes(X_train, X_test, y_train, y_test, output_folderpath):
     # Save dataframes to their respective output file paths
     for file, filename in zip([X_train, X_test, y_train, y_test], ['X_train', 'X_test', 'y_train', 'y_test']):
-        output_filepath = os.path.join(output_folderpath, f'{filename}.csv')
+        output_filepath = os.path.join(output_folderpath, f'{filename}.csv')  
         if check_existing_file(output_filepath):
             file.to_csv(output_filepath, index=False)
 
