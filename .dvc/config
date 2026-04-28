@@ -1,4 +1,6 @@
 [core]
-    remote = remote_storage
-['remote "remote_storage"']
-    url = ../../dvc_remote
+    remote = origin_dagshub
+['remote "origin_dagshub"']
+    url = https://dagshub.com/julienmbandong/Template_MLOps_accidents.dvc
+    auth = basic
+    user = julienmbandong
