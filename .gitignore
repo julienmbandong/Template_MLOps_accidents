@@ -121,4 +121,4 @@ tls.crt
 tls.key
 
 # Fichier LOG généré par le script de déploiement pour suivre les étapes du déploiement
-deploiement.log
+deploiement.logdata_drift_report.html
